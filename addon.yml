@@ -1,0 +1,17 @@
+---
+name:  tkgi-windows-disable-chksum-offload
+
+releases:
+- name:  tkgi-windows-disable-chksum-offload
+  version: 0+dev.1
+
+addons:
+  - name:  tkgi-windows-disable-chksum-offload
+    jobs:
+    - name: windows-disable-chksum-offload
+      release:  tkgi-windows-disable-chksum-offload
+    include: 
+      jobs:
+      - name: kube-proxy-windows 
+        release: kubo-windows
+
